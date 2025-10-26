@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About — DigitalCode</title>
+  <meta name="description" content="Learn about DigitalCode — our mission, values, and how we deliver premium digital subscriptions instantly and securely." />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles1.css" />
+  <link rel="icon" href="../assets/favicon.svg" />
+  <style>
+    /* --- About page only --- */
+    .about-hero{
+      background:
+        radial-gradient(1200px 600px at 10% 20%, rgba(124,58,237,.12), transparent 60%),
+        radial-gradient(1200px 600px at 90% 30%, rgba(6,182,212,.12), transparent 60%),
+        linear-gradient(180deg, #fff, #fff 60%, #fbfbfb 100%);
+      border-bottom:1px solid var(--line);
+      padding:56px 0 48px;
+    }
+    .about-hero h1{
+      font-family:"Playfair Display", serif;
+      font-size: clamp(28px, 4vw, 44px);
+      line-height:1.1; margin:.35rem 0 .5rem; text-align:center;
+    }
+    .about-hero .sub{ text-align:center; margin:0 auto; max-width:70ch }
+
+    .stats{
+      display:grid; grid-template-columns:repeat(4,1fr); gap:12px; margin-top:18px;
+    }
+    .stat{
+      background:#fff; border:1px solid var(--line); border-radius:16px; padding:14px; box-shadow:var(--shadow); text-align:center;
+    }
+    .stat strong{ font-size:1.25rem; display:block }
+    .stat span{ color:var(--muted); font-size:.9rem }
+
+    .about-grid{
+      display:grid; grid-template-columns:1.2fr 1fr; gap:22px; align-items:start;
+    }
+    @media (max-width: 900px){ .about-grid{ grid-template-columns:1fr } }
+
+    .about-card{
+      background:#fff; border:1px solid var(--line); border-radius:16px; padding:18px; box-shadow:var(--shadow)
+    }
+    .about-card h3{ margin:.2rem 0 .5rem; font-size:1.2rem }
+
+    .feature-grid{
+      display:grid; grid-template-columns:repeat(4,1fr); gap:12px;
+    }
+    @media (max-width: 900px){ .feature-grid{ grid-template-columns:repeat(2,1fr) } }
+    @media (max-width: 520px){ .feature-grid{ grid-template-columns:1fr } }
+    .feature{
+      background:#fff; border:1px solid var(--line); border-radius:14px; padding:14px; box-shadow:var(--shadow);
+      display:grid; gap:6px;
+    }
+    .feature .title{ font-weight:700 }
+    .feature .muted{ color:var(--muted) }
+
+    .steps{
+      display:grid; grid-template-columns:repeat(3,1fr); gap:12px;
+    }
+    @media (max-width: 820px){ .steps{ grid-template-columns:1fr } }
+    .step{
+      background:#fff; border:1px solid var(--line); border-radius:14px; padding:16px; box-shadow:var(--shadow)
+    }
+    .step .n{ display:inline-grid; place-items:center; width:28px; height:28px; border-radius:999px; background:linear-gradient(90deg,var(--brand1),var(--brand2)); color:#fff; font-weight:700; margin-bottom:8px }
+
+    .values{
+      display:grid; grid-template-columns:repeat(3,1fr); gap:12px;
+    }
+    @media (max-width: 820px){ .values{ grid-template-columns:1fr } }
+    .value{
+      background:#fff; border:1px solid var(--line); border-radius:14px; padding:16px; box-shadow:var(--shadow)
+    }
+
+    .faq details{
+      background:#fff; border:1px solid var(--line); border-radius:14px; padding:12px 14px; box-shadow:var(--shadow);
+    }
+    .faq details + details{ margin-top:10px }
+    .faq summary{ cursor:pointer; font-weight:700 }
+    .faq p{ margin:.5rem 0 0; color:var(--muted) }
+
+    .cta-band{
+      background:linear-gradient(90deg, rgba(124,58,237,.08), rgba(6,182,212,.08));
+      border:1px solid var(--line);
+      border-radius:16px; padding:16px; text-align:center; box-shadow:var(--shadow)
+    }
+    .cta-band .btn{ margin:4px }
+  </style>
+</head>
+<body>
+  <!-- Announcement -->
+  <div class="announcement">
+    <p>Welcome to DigitalCode — save up to 40% on premium plans today.</p>
+  </div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="../index.html">
+        <svg class="brand-mark" width="28" height="28" viewBox="0 0 24 24" aria-hidden="true">
+          <defs>
+            <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#7C3AED"/><stop offset="1" stop-color="#06B6D4"/>
+            </linearGradient>
+          </defs>
+          <rect x="2" y="2" width="20" height="20" rx="6" fill="url(#g)"/>
+          <path d="M8 12h8M8 9h8M8 15h5" stroke="white" stroke-width="1.6" stroke-linecap="round"/>
+        </svg>
+        <span>Digital<span class="accent">Code</span></span>
+      </a>
+
+      <nav class="nav">
+        <a href="../index.html">Home</a>
+        <a href="../catalog.html">Catalog</a>
+        <a href="../deals.html">Deals</a>
+        <a class="active" href="./abouts.html">About</a>
+        <a href="../contact.html">Contact</a>
+      </nav>
+
+      <div class="utils">
+        <form id="searchForm" class="search" action="../catalog.html" role="search" aria-label="Site search">
+          <input id="siteSearch" type="search" placeholder="Search subscriptions…" aria-label="Search" autocomplete="off" />
+          <button aria-label="Search">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="1.6"/>
+              <path d="M20 20l-3.2-3.2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+            </svg>
+          </button>
+          <div id="searchResults" class="search-results" hidden></div>
+        </form>
+
+        <button class="icon-btn" aria-label="Account">
+          <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8Zm6 8H6a1 1 0 0 1-1-1 7 7 0 0 1 14 0 1 1 0 0 1-1 1Z" fill="currentColor"/>
+          </svg>
+        </button>
+
+        <button class="icon-btn open-cart" aria-label="Cart">
+          <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M6 6h14l-1.5 8H8L6 3H3" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="9" cy="20" r="1.5" fill="currentColor"/>
+            <circle cx="17" cy="20" r="1.5" fill="currentColor"/>
+          </svg>
+          <span class="cart-count" aria-live="polite">0</span>
+        </button>
+      </div>
+
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation" />
+      <label for="nav-toggle" class="hamburger" aria-hidden="true"><span></span><span></span><span></span></label>
+      <nav class="mobile-nav">
+        <a href="../index.html">Home</a>
+        <a href="../catalog.html">Catalog</a>
+        <a href="../deals.html">Deals</a>
+        <a class="active" href="./abouts.html">About</a>
+        <a href="../contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- About hero -->
+    <section class="about-hero">
+      <div class="container">
+        <h1>About DigitalCode</h1>
+        <p class="sub">We help you access premium digital subscriptions at smarter prices. Instant codes, secure checkout, and friendly support — all in one place.</p>
+
+        <div class="stats">
+          <div class="stat"><strong>10,000+</strong><span>Codes delivered</span></div>
+          <div class="stat"><strong>&lt; 60s</strong><span>Average delivery time</span></div>
+          <div class="stat"><strong>4.9/5</strong><span>Customer rating</span></div>
+          <div class="stat"><strong>25+</strong><span>Countries served</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Our story / What we do -->
+    <section class="section">
+      <div class="container about-grid">
+        <div class="about-card">
+          <h3>Our mission</h3>
+          <p>DigitalCode exists to make premium entertainment and productivity more accessible. We curate the best plans (YouTube Premium, Netflix, Spotify, Truecaller, ChatGPT, and more) and deliver verified codes instantly, so you can enjoy your services right away.</p>
+          <p>We’re a small, customer-first team based in Nepal, operating globally. Every product on our catalog is tested, clearly described, and supported by humans — not bots.</p>
+        </div>
+
+        <div class="about-card">
+          <h3>What we do</h3>
+          <ul>
+            <li>Instant delivery of subscription codes</li>
+            <li>Clear pricing in your local currency</li>
+            <li>Guided setup and after-sales support</li>
+            <li>Money-back guarantee on failed activations</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why trust us -->
+    <section class="section">
+      <div class="container">
+        <h2>Why customers trust us</h2>
+        <div class="feature-grid">
+          <div class="feature">
+            <div class="title">Instant delivery</div>
+            <div class="muted">Codes typically arrive in under a minute.</div>
+          </div>
+          <div class="feature">
+            <div class="title">Secure checkout</div>
+            <div class="muted">Protected payments and encrypted data.</div>
+          </div>
+          <div class="feature">
+            <div class="title">Local support</div>
+            <div class="muted">We’re available on WhatsApp for quick help.</div>
+          </div>
+          <div class="feature">
+            <div class="title">Hassle-free refunds</div>
+            <div class="muted">Activation issues? We make it right.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How it works -->
+    <section class="section">
+      <div class="container">
+        <h2>How it works</h2>
+        <div class="steps">
+          <div class="step">
+            <div class="n">1</div>
+            <h3>Choose a plan</h3>
+            <p class="muted">Browse our catalog and pick the subscription you want.</p>
+          </div>
+          <div class="step">
+            <div class="n">2</div>
+            <h3>Pay securely</h3>
+            <p class="muted">Complete checkout in your local currency.</p>
+          </div>
+          <div class="step">
+            <div class="n">3</div>
+            <h3>Get your code</h3>
+            <p class="muted">We deliver instantly with simple activation steps.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Values -->
+    <section class="section">
+      <div class="container">
+        <h2>Our values</h2>
+        <div class="values">
+          <div class="value">
+            <h3>Trust first</h3>
+            <p class="muted">We only sell what we can support and guarantee.</p>
+          </div>
+          <div class="value">
+            <h3>Clarity</h3>
+            <p class="muted">Simple pricing, clear terms, and honest communication.</p>
+          </div>
+          <div class="value">
+            <h3>Care</h3>
+            <p class="muted">Support that treats you like a person, not a ticket.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section">
+      <div class="container">
+        <h2>FAQs</h2>
+        <div class="faq">
+          <details>
+            <summary>How fast will I receive my code?</summary>
+            <p>Most orders are delivered instantly after payment. If there’s a delay, we’ll notify you and keep you posted.</p>
+          </details>
+          <details>
+            <summary>What if the code doesn’t work?</summary>
+            <p>No worries—message us on WhatsApp and we’ll re-issue or refund per our refund policy.</p>
+          </details>
+          <details>
+            <summary>Do you support family or bundled plans?</summary>
+            <p>Yes! Check our Family Bundle for Netflix + YouTube + Spotify and other seasonal bundles on the Deals page.</p>
+          </details>
+          <details>
+            <summary>Which countries do you serve?</summary>
+            <p>We serve customers globally and show pricing in multiple currencies, including NPR, INR, USD, and EUR.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section">
+      <div class="container cta-band">
+        <h3>Ready to get started?</h3>
+        <p class="muted">Browse our best offers or chat with us for a quick recommendation.</p>
+        <div>
+          <a href="../catalog.html" class="btn primary">Browse catalog</a>
+          <a href="https://wa.me/9779818713854?text=Hello%20DigitalCode%2C%20I%27d%20like%20help%20with%20a%20subscription."
+             class="btn ghost" target="_blank" rel="noopener">Talk to us</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Newsletter (same style as other pages) -->
+  <section class="newsletter section" aria-labelledby="newsletter-title">
+    <div class="container">
+      <h2 id="newsletter-title">Get early access to discounts</h2>
+      <form class="newsletter-form" action="#" method="post">
+        <label class="sr-only" for="nl-email">Email</label>
+        <input id="nl-email" type="email" placeholder="Enter your email" required />
+        <button class="btn primary" type="submit">Subscribe</button>
+      </form>
+      <p class="fineprint">By subscribing, you agree to receive marketing emails from DigitalCode. You can unsubscribe anytime.</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="brand brand-footer" href="../index.html">
+          <svg class="brand-mark" width="26" height="26" viewBox="0 0 24 24" aria-hidden="true">
+            <defs><linearGradient id="g2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7C3AED"/><stop offset="1" stop-color="#06B6D4"/></linearGradient></defs>
+            <rect x="2" y="2" width="20" height="20" rx="6" fill="url(#g2)"/>
+            <path d="M8 12h8M8 9h8M8 15h5" stroke="white" stroke-width="1.6" stroke-linecap="round"/>
+          </svg>
+          <span>Digital<span class="accent">Code</span></span>
+        </a>
+        <p class="foot-desc">Instant delivery • Local support • Secure checkout</p>
+      </div>
+
+      <div>
+        <h4>Company</h4>
+        <ul class="foot-links">
+          <li><a href="../index.html">About us</a></li>
+          <li><a href="../catalog.html">Catalog</a></li>
+          <li><a href="../deals.html">Gift cards</a></li>
+          <li><a href="../contact.html">Support</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Legal</h4>
+        <ul class="foot-links">
+          <li><a href="#">Terms of Service</a></li>
+          <li><a href="#">Refund Policy</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Country/Region</h4>
+        <form class="locale">
+          <select aria-label="Currency">
+            <option selected>Nepal | NPR ₨</option>
+            <option>India | INR ₹</option>
+            <option>United States | USD $</option>
+            <option>European Union | EUR €</option>
+          </select>
+        </form>
+      </div>
+    </div>
+
+    <div class="container foot-bottom">
+      <p>© <span id="year"></span> DigitalCode. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Cart drawer (same across pages) -->
+  <aside id="cartDrawer" class="cart-drawer" aria-hidden="true" role="dialog" aria-label="Shopping cart">
+    <div class="cart-overlay" data-close-cart></div>
+    <div class="cart-panel">
+      <header class="cart-head"><h3>My cart</h3><button class="cart-close" aria-label="Close" data-close-cart>✕</button></header>
+      <div id="cartItems" class="cart-items"></div>
+      <footer class="cart-foot">
+        <div class="row"><span>Subtotal</span><strong id="cartSubtotal">NPR 0</strong></div>
+        <div class="row note">Taxes & discounts are calculated at checkout.</div>
+        <div class="cart-actions">
+          <button id="clearCart" class="btn ghost">Clear</button>
+          <button id="checkoutBtn" class="btn primary" disabled>Buy on WhatsApp</button>
+        </div>
+      </footer>
+    </div>
+  </aside>
+
+  <!-- Floating WhatsApp -->
+  <a class="chat-fab wa" href="https://wa.me/9779818713854?text=Hello%20DigitalCode" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 32 32" width="26" height="26" aria-hidden="true">
+      <path fill="currentColor" d="M26.6 5.4C23.8 2.6 20 1 16 1 8.8 1 2.9 6.9 2.9 14.1c0 2.2.6 4.3 1.7 6.2L3 29l8.9-1.5c1.8 1 3.9 1.5 6.1 1.5 7.2 0 13.1-5.9 13.1-13.1 0-3.5-1.4-6.8-4.5-10.5zM16 26.6c-2 0-3.9-.6-5.6-1.6l-.4-.2-5.2.9.9-5.1-.2-.4c-1.1-1.7-1.8-3.8-1.8-6 0-6.2 5-11.2 11.2-11.2 3 0 5.8 1.2 7.9 3.3 2.1 2.1 3.3 4.9 3.3 7.9C26.9 21.6 22.1 26.6 16 26.6z"/>
+      <path fill="currentColor" d="M20.4 17.3c-.2-.1-1.3-.7-1.5-.8-.2-.1-.3-.1-.5.1s-.6.6-.7.7-.3.1-.5 0c-.2-.1-1-.3-1.8-1.1-.7-.6-1.1-1.2-1.2-1.4-.1-.2 0-.3.1-.4.1-.1.2-.3.3-.4.1-.1.1-.2.2-.4.1-.1 0-.3 0-.4 0-.1-.6-1.3-.8-1.7-.2-.4-.4-.4-.6-.4h-.5c-.2 0-.4.1-.6.3-.2.2-.9.9-.9 2 0 1.1.9 2.3 1 2.5.1.2 1.7 2.5 4.1 3.4 2.4.9 2.4.6 2.8.6s1.4-.5 1.6-1.1c.2-.6.2-1 .2-1.1 0-.1-.2-.1-.3-.2z"/>
+    </svg>
+  </a>
+
+  <script src="../app.js"></script>
+</body>
+</html>

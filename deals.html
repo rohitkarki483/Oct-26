@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Deals — DigitalCode</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles1.css" />
+</head>
+<body>
+  <div class="announcement"><p>Limited-time offers. Grab them before they’re gone!</p></div>
+
+  <!-- Reuse the same header block as catalog/index -->
+  <!-- (You can copy the exact header from index.html here) -->
+  <!-- START Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <svg class="brand-mark" width="28" height="28" viewBox="0 0 24 24" aria-hidden="true">
+          <defs><linearGradient id="g" x1="0" y="0" x2="1" y2="1"><stop offset="0" stop-color="#0A2540"/><stop offset="1" stop-color="#1DB954"/></linearGradient></defs>
+          <rect x="2" y="2" width="20" height="20" rx="6" fill="url(#g)"/><path d="M8 12h8M8 9h8M8 15h5" stroke="white" stroke-width="1.6" stroke-linecap="round"/>
+        </svg>
+        <span>Digital<span class="accent">Code</span></span>
+      </a>
+      <nav class="nav">
+        <a href="index.html">Home</a><a href="catalog.html">Catalog</a><a href="deals.html">Deals</a><a href="contact.html" class="open-contact">Contact</a>
+      </nav>
+      <div class="utils">
+        <form id="searchForm" class="search" action="catalog.html" role="search" aria-label="Site search">
+          <input id="siteSearch" type="search" placeholder="Search" aria-label="Search" autocomplete="off" />
+          <button aria-label="Search">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="1.6"/><path d="M20 20l-3.2-3.2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+          </button>
+          <div id="searchResults" class="search-results" hidden></div>
+        </form>
+        <button class="icon-btn" aria-label="Account">
+          <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8Zm6 8H6a1 1 0 0 1-1-1 7 7 0 0 1 14 0 1 1 0 0 1-1 1Z" fill="currentColor"/></svg>
+        </button>
+        <button class="icon-btn open-cart" aria-label="Cart">
+          <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6h14l-1.5 8H8L6 3H3" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/><circle cx="9" cy="20" r="1.5" fill="currentColor"/><circle cx="17" cy="20" r="1.5" fill="currentColor"/></svg>
+          <span class="cart-count" aria-live="polite">0</span>
+        </button>
+      </div>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation" />
+      <label for="nav-toggle" class="hamburger" aria-hidden="true"><span></span><span></span><span></span></label>
+      <nav class="mobile-nav">
+        <a href="index.html">Home</a><a href="catalog.html">Catalog</a><a href="deals.html">Deals</a><a href="contact.html" class="open-contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+  <!-- END Header -->
+
+  <main class="section">
+    <div class="container">
+      <h2>Today’s Deals</h2>
+      <p class="muted">New promos drop frequently. Check back for fresh discounts.</p>
+      <!-- Add your deals content/grid here -->
+    </div>
+  </main>
+
+ <footer class="footer">
+  <div class="container footer-grid">
+    <div>
+      <a class="brand brand-footer" href="index.html">
+        <svg class="brand-mark" width="26" height="26" viewBox="0 0 24 24" aria-hidden="true">
+          <defs>
+            <linearGradient id="g2" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#7C3AED"/>
+              <stop offset="1" stop-color="#06B6D4"/>
+            </linearGradient>
+          </defs>
+        <rect x="2" y="2" width="20" height="20" rx="6" fill="url(#g2)"/>
+        <path d="M8 12h8M8 9h8M8 15h5" stroke="white" stroke-width="1.6" stroke-linecap="round"/>
+        </svg>
+        <span>Digital<span class="accent">Code</span></span>
+      </a>
+      <p class="foot-desc">Instant delivery • Local support • Secure checkout</p>
+    </div>
+
+    <div>
+      <h4>Company</h4>
+      <ul class="foot-links">
+        <li><a href="index.html">About us</a></li>
+        <li><a href="catalog.html">Catalog</a></li>
+        <li><a href="deals.html">Gift cards</a></li>
+        <li><a href="contact.html">Support</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h4>Legal</h4>
+      <ul class="foot-links">
+        <li><a href="#">Terms of Service</a></li>
+        <li><a href="#">Refund Policy</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="container foot-bottom">
+    <p>© <span id="year"></span> DigitalCode. All rights reserved.</p>
+  </div>
+</footer>
+
+
+  <!-- Cart drawer + WA -->
+  <aside id="cartDrawer" class="cart-drawer" aria-hidden="true" role="dialog" aria-label="Shopping cart">
+    <div class="cart-overlay" data-close-cart></div>
+    <div class="cart-panel">
+      <header class="cart-head"><h3>My cart</h3><button class="cart-close" aria-label="Close" data-close-cart>✕</button></header>
+      <div id="cartItems" class="cart-items"></div>
+      <footer class="cart-foot">
+        <div class="row"><span>Subtotal</span><strong id="cartSubtotal">NPR 0</strong></div>
+        <div class="row note">Taxes & discounts are calculated at checkout.</div>
+        <div class="cart-actions"><button id="clearCart" class="btn ghost">Clear</button><button id="checkoutBtn" class="btn primary" disabled>Buy on WhatsApp</button></div>
+      </footer>
+    </div>
+  </aside>
+
+  <a class="chat-fab wa" href="https://wa.me/9779818713854?text=Hello%20DigitalCode" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 32 32" width="26" height="26" aria-hidden="true"><path fill="currentColor" d="M26.6 5.4C23.8 2.6 20 1 16 1 8.8 1 2.9 6.9 2.9 14.1c0 2.2.6 4.3 1.7 6.2L3 29l8.9-1.5c1.8 1 3.9 1.5 6.1 1.5 7.2 0 13.1-5.9 13.1-13.1 0-3.5-1.4-6.8-4.5-10.5zM16 26.6c-2 0-3.9-.6-5.6-1.6l-.4-.2-5.2.9.9-5.1-.2-.4c-1.1-1.7-1.8-3.8-1.8-6 0-6.2 5-11.2 11.2-11.2 3 0 5.8 1.2 7.9 3.3 2.1 2.1 3.3 4.9 3.3 7.9C26.9 21.6 22.1 26.6 16 26.6z"/><path fill="currentColor" d="M20.4 17.3c-.2-.1-1.3-.7-1.5-.8-.2-.1-.3-.1-.5.1s-.6.6-.7.7-.3.1-.5 0c-.2-.1-1-.3-1.8-1.1-.7-.6-1.1-1.2-1.2-1.4-.1-.2 0-.3.1-.4.1-.1.2-.3.3-.4.1-.1.1-.2.2-.4.1-.1 0-.3 0-.4 0-.1-.6-1.3-.8-1.7-.2-.4-.4-.4-.6-.4h-.5c-.2 0-.4.1-.6.3-.2.2-.9.9-.9 2 0 1.1.9 2.3 1 2.5.1.2 1.7 2.5 4.1 3.4 2.4.9 2.4.6 2.8.6s1.4-.5 1.6-1.1c.2-.6.2-1 .2-1.1 0-.1-.2-.1-.3-.2z"/></svg>
+  </a>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>DigitalCode — Premium Digital Subscriptions</title>
+  <meta name="description" content="DigitalCode sells affordable premium digital subscriptions like YouTube Premium, Netflix, Spotify, and more." />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles1.css" />
+  <link rel="icon" href="assets/favicon.svg" />
+</head>
+<body>
+  <!-- Announcement -->
+  <div class="announcement">
+    <p>Welcome to DigitalCode — save up to 40% on premium plans today.</p>
+  </div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <svg class="brand-mark" width="28" height="28" viewBox="0 0 24 24" aria-hidden="true">
+          <defs>
+            <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#7C3AED"/><stop offset="1" stop-color="#06B6D4"/>
+            </linearGradient>
+          </defs>
+          <rect x="2" y="2" width="20" height="20" rx="6" fill="url(#g)"/>
+          <path d="M8 12h8M8 9h8M8 15h5" stroke="white" stroke-width="1.6" stroke-linecap="round"/>
+        </svg>
+        <span>Digital<span class="accent">Code</span></span>
+      </a>
+
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="catalog.html">Catalog</a>
+        <a href="deals.html">Deals</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <div class="utils">
+        <form id="searchForm" class="search" action="catalog.html" role="search" aria-label="Site search">
+          <input id="siteSearch" type="search" placeholder="Search" aria-label="Search" autocomplete="off" />
+          <button aria-label="Search">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="1.6"/>
+              <path d="M20 20l-3.2-3.2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+            </svg>
+          </button>
+          <div id="searchResults" class="search-results" hidden></div>
+        </form>
+
+        <button class="icon-btn" aria-label="Account">
+          <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8Zm6 8H6a1 1 0 0 1-1-1 7 7 0 0 1 14 0 1 1 0 0 1-1 1Z" fill="currentColor"/>
+          </svg>
+        </button>
+
+        <button class="icon-btn open-cart" aria-label="Cart">
+          <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M6 6h14l-1.5 8H8L6 3H3" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="9" cy="20" r="1.5" fill="currentColor"/>
+            <circle cx="17" cy="20" r="1.5" fill="currentColor"/>
+          </svg>
+          <span class="cart-count" aria-live="polite">0</span>
+        </button>
+      </div>
+
+ <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation" />
+<label for="nav-toggle" class="hamburger" aria-hidden="true">
+  <img src="assets/menu_icon.png" class="open-icon" alt="Close menu" width="24" height="24">
+  <img src="assets/close.png" class="close-icon" alt="Open menu" width="24" height="24">
+</label>
+      <nav class="mobile-nav">
+        <a href="index.html">Home</a>
+        <a href="catalog.html">Catalog</a>
+        <a href="deals.html">Deals</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="home">
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <p class="eyebrow">Premium Access, Smarter Prices</p>
+          <h1>All your favorite subscriptions in one place.</h1>
+          <p class="sub">Get instant codes for YouTube Premium, Netflix, Spotify, and more—delivered securely by DigitalCode.</p>
+          <div class="cta-row">
+            <a href="catalog.html" class="btn primary">Shop subscriptions</a>
+            <a href="https://wa.me/9779818713854?text=Hello%20DigitalCode" class="btn ghost" target="_blank" rel="noopener">Talk to us</a>
+          </div>
+        </div>
+
+        <!-- Auto slideshow -->
+        <div class="deal-slider" id="dealSlider" aria-label="Deals slider" aria-live="polite">
+          <div class="deal-slide is-active"><img src="assets/asian1.png" alt="Deal: YouTube Premium annual discount"></div>
+          <div class="deal-slide"><img src="assets/netflix-slide.png" alt="Deal: Netflix 4K promo"></div>
+          <div class="deal-slide"><img src="assets/chagpt.png" alt="Deal: AI plan promo"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Home: catalog products -->
+    <section id="home-catalog" class="section">
+      <div class="container">
+        <h2>Explore our catalog</h2>
+
+        <div class="grid products">
+          <!-- 1 -->
+          <article class="card" data-tags="youtube,yt,annual" id="home-youtube">
+            <div class="badge youtube">-35%</div>
+            <div class="media"><img src="assets/youtube-premium.png" alt="YouTube Premium plan" loading="lazy" /></div>
+            <h3>YouTube Premium — 12 months</h3>
+            <p class="desc">Ad-free, background play & downloads. Instant delivery.</p>
+            <div class="price"><span class="new">NPR 2,199</span><span class="old">NPR 3,399</span></div>
+            <a href="#" class="btn add">Add to cart</a>
+          </article>
+
+          <!-- 2 -->
+          <article class="card" data-tags="netflix,4k,uhd,streaming" id="home-netflix">
+            <div class="badge netflix">Hot</div>
+            <div class="media"><img src="assets/netflix-4k.png" alt="Netflix 4K plan" loading="lazy" /></div>
+            <h3>Netflix 4K — 1 month</h3>
+            <p class="desc">Ultra HD streaming. Code delivered in seconds.</p>
+            <div class="price"><span class="new">NPR 499</span><span class="old">NPR 650</span></div>
+            <a href="#" class="btn add">Add to cart</a>
+          </article>
+
+          <!-- 3 -->
+          <article class="card" data-tags="spotify,music,premium" id="home-spotify">
+            <div class="badge spotify">Save 20%</div>
+            <div class="media"><img src="assets/spotify.png" alt="Spotify Premium" loading="lazy" /></div>
+            <h3>Spotify Premium — 3 months</h3>
+            <p class="desc">Music without interruptions. Works worldwide.</p>
+            <div class="price"><span class="new">NPR 899</span><span class="old">NPR 1,120</span></div>
+            <a href="#" class="btn add">Add to cart</a>
+          </article>
+
+          <!-- 4 -->
+          <article class="card" data-tags="youtube,netflix,bundle,spotify,all,family" id="home-bundle">
+            <div class="badge bundle">Bundle</div>
+            <div class="media"><img src="assets/family.png" alt="Family Bundle: Netflix, YouTube Premium and Spotify" loading="lazy" /></div>
+            <h3>Family Bundle — Spotify + YouTube + Netflix</h3>
+            <p class="desc">Three services in one plan. Instant delivery, easy setup.</p>
+            <div class="price"><span class="new">NPR 3,799</span><span class="old">NPR 4,550</span></div>
+            <a href="#" class="btn add">Add to cart</a>
+          </article>
+
+          <!-- 5 -->
+          <article class="card" data-tags="chatgpt,ai,plus" id="home-chatgpt">
+            <div class="badge limited">Limited</div>
+            <div class="media"><img src="assets/chagpt.png" alt="ChatGPT Plus — 1 month subscription" loading="lazy" /></div>
+            <h3>ChatGPT Plus — 1 month</h3>
+            <p class="desc">Faster replies, priority access to new features, and higher limits.</p>
+            <div class="price"><span class="new">NPR 1,899</span><span class="old">NPR 2,199</span></div>
+            <a href="#" class="btn add">Add to cart</a>
+          </article>
+
+          <!-- 6 -->
+          <article class="card" data-tags="truecaller,caller id,spam" id="home-truecaller">
+            <div class="badge">Save 20%</div>
+            <div class="media"><img src="assets/truecaller.png" alt="Truecaller Premium — caller ID & spam blocker" loading="lazy" /></div>
+            <h3>Truecaller Premium — 12 months</h3>
+            <p class="desc">Advanced caller ID, spam blocking, and call recording.</p>
+            <div class="price"><span class="new">NPR 1,499</span><span class="old">NPR 1,899</span></div>
+            <a href="#" class="btn add">Add to cart</a>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+<!-- Newsletter -->
+<section class="newsletter section" aria-labelledby="newsletter-title">
+  <div class="container">
+    <h2 id="newsletter-title">Get early access to discounts</h2>
+    <form class="newsletter-form" action="#" method="post">
+      <label class="sr-only" for="nl-email">Email</label>
+      <input id="nl-email" type="email" placeholder="Enter your email" required />
+      <button class="btn primary" type="submit">Subscribe</button>
+    </form>
+    <p class="fineprint">By subscribing, you agree to receive marketing emails from DigitalCode. You can unsubscribe anytime.</p>
+  </div>
+</section>
+
+  <footer class="footer">
+  <div class="container footer-grid">
+    <div>
+      <a class="brand brand-footer" href="index.html">
+        <svg class="brand-mark" width="26" height="26" viewBox="0 0 24 24" aria-hidden="true">
+          <defs>
+            <linearGradient id="g2" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#7C3AED"/>
+              <stop offset="1" stop-color="#06B6D4"/>
+            </linearGradient>
+          </defs>
+        <rect x="2" y="2" width="20" height="20" rx="6" fill="url(#g2)"/>
+        <path d="M8 12h8M8 9h8M8 15h5" stroke="white" stroke-width="1.6" stroke-linecap="round"/>
+        </svg>
+        <span>Digital<span class="accent">Code</span></span>
+      </a>
+      <p class="foot-desc">Instant delivery • Local support • Secure checkout</p>
+    </div>
+
+    <div>
+      <h4>Company</h4>
+      <ul class="foot-links">
+        <li><a href="#">About us</a></li>
+        <li><a href="catalog.html">Catalog</a></li>
+        <li><a href="deals.html">Gift cards</a></li>
+        <li><a href="contact.html">Support</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h4>Legal</h4>
+      <ul class="foot-links">
+        <li><a href="#">Terms of Service</a></li>
+        <li><a href="#">Refund Policy</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+      </ul>
+    </div>
+
+   
+  </div>
+
+  <div class="container foot-bottom">
+    <p>© <span id="year"></span> DigitalCode. All rights reserved.</p>
+  </div>
+</footer>
+
+
+  <!-- Cart drawer -->
+  <aside id="cartDrawer" class="cart-drawer" aria-hidden="true" role="dialog" aria-label="Shopping cart">
+    <div class="cart-overlay" data-close-cart></div>
+    <div class="cart-panel">
+      <header class="cart-head"><h3>My cart</h3><button class="cart-close" aria-label="Close" data-close-cart>✕</button></header>
+      <div id="cartItems" class="cart-items"></div>
+      <footer class="cart-foot">
+        <div class="row"><span>Subtotal</span><strong id="cartSubtotal">NPR 0</strong></div>
+        <div class="row note">Taxes & discounts are calculated at checkout.</div>
+        <div class="cart-actions"><button id="clearCart" class="btn ghost">Clear</button><button id="checkoutBtn" class="btn primary" disabled>Buy on WhatsApp</button></div>
+      </footer>
+    </div>
+  </aside>
+
+  <!-- Floating WhatsApp -->
+  <a class="chat-fab wa" href="https://wa.me/9779818713854?text=Hello%20DigitalCode" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 32 32" width="26" height="26" aria-hidden="true">
+      <path fill="currentColor" d="M26.6 5.4C23.8 2.6 20 1 16 1 8.8 1 2.9 6.9 2.9 14.1c0 2.2.6 4.3 1.7 6.2L3 29l8.9-1.5c1.8 1 3.9 1.5 6.1 1.5 7.2 0 13.1-5.9 13.1-13.1 0-3.5-1.4-6.8-4.5-10.5zM16 26.6c-2 0-3.9-.6-5.6-1.6l-.4-.2-5.2.9.9-5.1-.2-.4c-1.1-1.7-1.8-3.8-1.8-6 0-6.2 5-11.2 11.2-11.2 3 0 5.8 1.2 7.9 3.3 2.1 2.1 3.3 4.9 3.3 7.9C26.9 21.6 22.1 26.6 16 26.6z"/>
+      <path fill="currentColor" d="M20.4 17.3c-.2-.1-1.3-.7-1.5-.8-.2-.1-.3-.1-.5.1s-.6.6-.7.7-.3.1-.5 0c-.2-.1-1-.3-1.8-1.1-.7-.6-1.1-1.2-1.2-1.4-.1-.2 0-.3.1-.4.1-.1.2-.3.3-.4.1-.1.1-.2.2-.4.1-.1 0-.3 0-.4 0-.1-.6-1.3-.8-1.7-.2-.4-.4-.4-.6-.4h-.5c-.2 0-.4.1-.6.3-.2.2-.9.9-.9 2 0 1.1.9 2.3 1 2.5.1.2 1.7 2.5 4.1 3.4 2.4.9 2.4.6 2.8.6s1.4-.5 1.6-1.1c.2-.6.2-1 .2-1.1 0-.1-.2-.1-.3-.2z"/>
+    </svg>
+  </a>
+
+  <script src="app.js"></script>
+</body>
+</html>
