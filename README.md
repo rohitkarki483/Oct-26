@@ -78,7 +78,7 @@ http://13.61.173.1
 ![EC2](https://github.com/rohitkarki483/Oct-26/blob/61f8b78fa7136960b2ad79f61a153a77a55470d7/Screenshots/Ec2.bmp)
 #### Website Homepage
 
-![Website Homepage] (https://github.com/rohitkarki483/Oct-26/blob/61f8b78fa7136960b2ad79f61a153a77a55470d7/Screenshots/Frontpage.bmp)
+![Website Homepage](https://github.com/rohitkarki483/Oct-26/blob/61f8b78fa7136960b2ad79f61a153a77a55470d7/Screenshots/Frontpage.bmp)
 #### NGINX Server Running
-![nginx] (https://github.com/rohitkarki483/Oct-26/blob/9c463e662f748f2740dd4ae02803bd70a3601989/Screenshots/Nginx.bmp)
+![nginx](https://github.com/rohitkarki483/Oct-26/blob/9c463e662f748f2740dd4ae02803bd70a3601989/Screenshots/Nginx.bmp)
 
