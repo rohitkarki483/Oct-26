@@ -63,12 +63,22 @@ sudo rm -rf /var/www/html/*
 sudo cp -r * /var/www/html/
 ```
 
-### **5.Restart NGINX
+### **5.Restart NGINX**
 ```bash
 sudo systemctl restart nginx
 ```
 
-### **6.View Website
+### **6.View Website**
 Open browser:
 http://13.61.173.1
+
+### **7 Screenshots**
+#### ECS Instance 
+
+![EC2](https://github.com/rohitkarki483/Oct-26/blob/61f8b78fa7136960b2ad79f61a153a77a55470d7/Screenshots/Ec2.bmp)
+#### Website Homepage
+
+![Website Homepage] (https://github.com/rohitkarki483/Oct-26/blob/61f8b78fa7136960b2ad79f61a153a77a55470d7/Screenshots/Frontpage.bmp)
+#### NGINX Server Running
+![nginx] (https://github.com/rohitkarki483/Oct-26/blob/61f8b78fa7136960b2ad79f61a153a77a55470d7/Screenshots/Frontpage.bmp)
 
